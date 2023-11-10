@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <template id="message__template">
+    <div class="chat__message">
+      <p class="chat__message-content">
+        Собеседник: Добрый день!
+      </p>
+      <p class="message__time">
+        <span>18:45</span>
+      </p>
+    </div>
+  </template>
+
+  <form class="find__message-wrapper">
+    <p class="find__message-text" style="color: rgb(255, 255, 255);">Enter nickname:</p>
+    <input type="text" class="find__message-input">
+    <button class="find__message-btn">get</button>
+    <span class="message__count"></span>
+    <div class="messages__wrapper"></div>
+  </form>
+
+  <div class="container">
+    <div class="header__options">
+      <button class="option__btn">
+        Settings
+      </button>
+      <label class="switch">
+        <input class="theme__toggle" type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <button class="header__quit-btn">
+        Quit
+      </button>
+    </div>
+    <div class="chat__wrapper">
+      <div class="chat">
+      </div>
+    </div>
+    <form class="lower__message">
+      <input class="lower__message-input" type="text" placeholder="message..">
+      <button class="lower__message-send">
+        send
+      </button>
+    </form>
+
+    <div class="option__wrapper">
+      <div class="option">
+        <p class="option__text">Settings</p>
+        <button class="option__close">
+          +
+        </button>
+      </div>
+      <p class="name">Сhat name</p>
+      <div class="chat__name">
+        <input type="text" class="chat__name-input">
+        <button class="chat__name-btn">send</button>
+      </div>
+    </div>
+
+    <div class="authorization__wrapper authorization__wrapper--active">
+      <div class="autorization">
+        <p class="autorization__text">Login</p>
+        <button class="autorization__close">
+          +
+        </button>
+      </div>
+      <p class="mail">Email:</p>
+      <input class="mail__input" type="text">
+      <div class="mail__buttons">
+        <button class="send__mail-btn">Get code</button>
+        <button class="enter__code-btn">Enter code</button>
+      </div>
+    </div>
+
+    <div class="confirm__wrapper">
+      <div class="confirm">
+        <p class="confirm__text">Confirm</p>
+        <button class="confirm__close">
+          +
+        </button>
+      </div>
+      <p class="code__text">Code:</p>
+      <input class="code__input" type="text">
+      <div class="login">
+        <button class="login__btn">Login</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./constants.js"></script>
+  <!-- <script type="module" src="./ui.js"></script> -->
+  <script type="module" src="./httpRequest.js"></script>
+  <script type="module" src="./popaps.js"></script>
+  <script type="module" src="./createMessages.js"></script>
+  <script type="module" src="./webSocket.js"></script>
+  <script type="module" src="./user.js"></script>
+  <script type="module" src="./functions.js"></script>
+  <!-- <script type="module" src="./findMessage.js"></script> -->
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

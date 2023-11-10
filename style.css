@@ -1,0 +1,346 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding-top: 140px;
+    background-color: black;
+    transition: background-color 0.3s;
+  
+  }
+  .messages__wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 355px;
+    padding: 8px;
+  }
+  
+  .container {
+    position: relative;
+    padding: 15px;
+    max-width: 350px;
+  }
+  
+  .find__message-wrapper {
+    padding: 15px;
+    margin-top: 54px;
+    height: 490px;
+    width: 290px;
+    background-color: #89cff0;
+    transition: background-color 0.3s;
+  }
+  
+  .message__count {
+    margin-left: 18px;
+    color: #ffffff;
+  }
+  
+  button,
+  input {
+    border: 1px solid #000;
+    outline: none;
+    background-color: #ffffff;
+  }
+  
+  .header__options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+  
+  .option__btn,
+  .header__quit-btn {
+    display: inline-block;
+    padding: 0 20px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #40bbea;
+    box-sizing: 0 2px#a8d5f7;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .option__btn:hover {
+    transform: scale(1.05);
+  }
+  .header__quit-btn:hover {
+    transform: scale(1.05);
+  }
+  
+  .chat__wrapper {
+   height: 435px;
+   width: 314px;
+   display: flex; 
+   align-items: end;
+   flex-direction: column;
+  }
+  
+  .chat {
+   padding: 5px;
+   height: 430px;
+   width: 315px;
+   display: flex;
+   flex-direction: column;
+   overflow-y: scroll;
+   word-break: break-all;
+  }
+  
+  .chat::-webkit-scrollbar,
+  .messages__wrapper::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+  
+  .chat::-webkit-scrollbar-thumb,
+  .messages__wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #40bbea;
+  }
+  
+  .chat::-webkit-scrollbar-track,
+  .messages__wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;  
+  }
+  .chat__message-wrapper-my {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .chat__message,
+  .finded__message {
+    display: inline-block;
+    background-color: #e1f3f6;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .message__time {
+    text-align: right;
+    font-style: italic;
+  }
+  
+  .lower__message {
+    padding-top: 8px;
+    position: relative;
+    display: flex;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px;
+    max-width: 400px;
+  }
+  
+  
+  .lower__message-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .lower__message-send {
+    background-color: #40bbea;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .lower__message-send:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .option__wrapper {
+    max-width: 315px;
+    min-height: 493px;
+    margin-top: 9px;
+    padding: 12px;
+    background-color: #89CFF0;
+    top: 45px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+  }
+  
+  .option__wrapper--active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .option {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .option__close,
+  .autorization__close,
+  .confirm__close {
+    color: gray;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    line-height: 70%;
+    transform: rotate(45deg);
+    border: 1px solid transparent;
+  }
+  
+  .name {
+    margin-bottom: 8px;
+  }
+  
+  .authorization__wrapper,
+  .confirm__wrapper {
+    margin-top: 9px;
+    padding: 12px;
+    min-height: 490px;
+    background-color: #89CFF0;
+    position: absolute;
+    top: 45px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  .popap__dark {
+    background-color: #08457E;
+  }
+  
+  .authorization__wrapper--active,
+  .confirm__wrapper--active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .autorization,
+  .confirm {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    color: #ffffff;
+  }
+  
+  .autorization__text,
+  .confirm__text {
+    margin-bottom: 70px;
+  }
+  
+  .mail__buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .mail__input,
+  .code__input,
+  .chat__name-input,
+  .find__message-input {
+    width: 290px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .find__message-input{
+    width: 260px;
+  }
+  
+  .mail,
+  .option__text,
+  .code__text,
+  .name {
+    color: #ffffff;
+  }
+  
+  .send__mail-btn,
+  .enter__code-btn,
+  .login__btn,
+  .chat__name-btn,
+  .find__message-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  
+  .dark {
+    background-color: #08457E;
+  }
+  
+  .chat__dark::-webkit-scrollbar-thumb,
+  .messages__wrapper-dark::-webkit-scrollbar-thumb{
+    background-color: #08457E;
+  }
+  
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Скрыть флажок HTML по умолчанию */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Ползунок */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #7FC7FF;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 20px;
+  }
+  
+  .slider:before {
+    content: "☀️";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+   .theme__toggle.dark + .slider {
+    background-color: #08457E;
+  }
+  
+   .theme__toggle:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
